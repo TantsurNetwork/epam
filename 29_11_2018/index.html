@@ -9,20 +9,59 @@
 </head>
 
 <style>
+
     table {
         border-collapse: collapse;
         text-align: center;
         width: 100%;
     }
 
+    thead {
+        background: #0d9449;
+        color: white;
+    }
+
+    th {
+        height: 100px;
+    }
+
+    td {
+        height:210px;
+    }
+
+    td, th {
+        padding: 10px 30px;
+        border: 1px solid black;
+    }
+
+    table * {
+        vertical-align: middle;
+    }
+
+    tbody tr:nth-child(2n) {
+        background: #c7e2d1;
+    }
+
     ul {
         list-style: none;
         text-align: left;
+        padding: 0;
     }
 
     ul>li::before {
         content: "✔";
         color: black;
+    }
+
+    tbody tr td:first-child {
+        position: relative;
+        padding-right: 320px;
+    }
+
+    tbody tr td:first-child img {
+        position: absolute;
+        top: -15px;
+        right: 20px;   
     }
     
 </style>
@@ -38,7 +77,7 @@
         <li>Sunday</li>
     </ol>
 
-    <table border="1">
+    <table>
         <thead>
             <tr>
                 <th>Группа продуктов</th>
@@ -52,13 +91,13 @@
             <tr>
                 <td>
                     <span>Зерновые продукты</span>
-                    <img src="" alt="">
+                    <img src="./img/bread.png" width="250px" height="220px" alt="bread">
                 </td>
-                <td>1</td>
+                <td>6-8</td>
                 <td>
                     <ul class="wat">
-                        <li>1 кусочек хлеба</li>
-                        <li>30г крупы или сухового завтрака</li>
+                        <li>1 кусочек хлеба,</li>
+                        <li>30г крупы или сухового завтрака,</li>
                         <li>&frac12 тарелки каши или макарон</li>
                     </ul>
                 </td>
@@ -67,115 +106,113 @@
             </tr>
             <tr>
                 <td>
-                    <span>2</span>
-                    <img src="" alt="">
+                    <span>Овощи</span>
+                    <img src="./img/vegetables.png" width="280px" height="250px" alt="fruits and vegetables">
                 </td>
-                <td>2</td>
+                <td>4-5</td>
                 <td>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li>1 тарелка резаных листовых овощей,</li>
+                        <li>&frac12 тарелки приготовленных овощей (варка, тушение и т.д.), </li>
+                        <li>170 мл овощного сока без сахара</li>
                     </ul>
                 </td>
-                <td></td>
-                <td></td>
+                <td>Помидоры, картофель, морковь, горошек, кабачки, любая капуста, шпинат, фасоль, и т.д.</td>
+                <td>Богатые источники калия, магния и пищевых волокон</td>
             </tr>
             <tr>
                 <td>
-                    <span>3</span>
-                    <img src="" alt="">
+                    <span>Фрукты</span>
+                    <img src="./img/fruits.png" width="280px" height="220px" alt="">
                 </td>
-                <td>3</td>
+                <td>4-5</td>
                 <td>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li>170 мл сока,</li>
+                        <li>среднего размера фрукт,</li>
+                        <li>&frac12 чашки свежих или замороженных фруктов, &frac14 чашки сухофруктов</li>
                     </ul>
                 </td>
-                <td></td>
-                <td></td>
+                <td>Цитрусовые, виноград, бананы, абрикосы, персики, ягоды, финики, соки без добавки сахара</td>
+                <td>Богатые источники калия, магния и пищевых волокон</td>
             </tr>
             <tr>
                 <td>
-                    <span>4</span>
-                    <img src="" alt="">
+                    <span>Молочные продукты (Обезжиренные или с низким содержанием жира)</span>
+                    <img src="./img/cottage_cheese.png" width="230px" height="210px" alt="">
                 </td>
-                <td>4</td>
+                <td>2-3</td>
                 <td>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li>220-230мл молока,</li>
+                        <li>1 чашка йогурта,</li>
+                        <li>40-45г сыра</li>
                     </ul>
                 </td>
-                <td></td>
-                <td></td>
+                <td>Молоко, кисломолочные продукты, творог, сыры - все обезжиренные или низкожирные (1%)</td>
+                <td>Богаты кальцием и белками</td>
             </tr>
             <tr>
                 <td>
-                    <span>5</span>
-                    <img src="" alt="">
+                    <span>Постное мясо, птица и рыба</span>
+                    <img src="./img/meat2.png" width="260px" height="240px" alt="">
                 </td>
-                <td>5</td>
+                <td>< 170гр</td>
                 <td>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li>80-90гр приготовленного мяса птицы или рыбы</li>
                     </ul>
                 </td>
-                <td></td>
-                <td></td>
+                <td>Мясо постное, без видимого жира, птица без кожи. Рыба может быть жирной</td>
+                <td>Богаты белком и магнием</td>
             </tr>
             <tr>
                 <td>
-                    <span>6</span>
-                    <img src="" alt="">
+                    <span>Орехи, семечки, сухие фасоль и горох</span>
+                    <img src="./img/nuts.png" width="260px" height="200px" alt="">
                 </td>
-                <td>6</td>
+                <td>4-5 в неделю</td>
                 <td>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li>40-45г орехов,</li>
+                        <li>2 ст. л. семечек,</li>
+                        <li>&frac12 тарелки приготовленной фасоли или гороха</li>
                     </ul>
                 </td>
-                <td></td>
-                <td></td>
+                <td>Любые орехи, семечки, подсолнечника и тыквы, фасоль, горох</td>
+                <td>Богаты энергией, магнием, калием, белками и волокнами </td>
             </tr>
             <tr>
                 <td>
-                    <span>7</span>
-                    <img src="" alt="">
+                    <span>Жиры и масла</span>
+                    <img src="./img/oils.png" width="280px" height="220px" alt="">
                 </td>
-                <td>7</td>
+                <td>2-3</td>
                 <td>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li>1 ст. л. майонеза,</li>
+                        <li>1 ч. л. растительного маса,</li>
+                        <li>1 ч. л. спреда,</li>
+                        <li>2 ст. л. салатного соуса</li>
                     </ul>
                 </td>
-                <td></td>
-                <td></td>
+                <td>Спреды(мягкие маргарины), низкожирный майонез, салатные соусы, любые растительные масла</td>
+                <td>Источник жирных кислот</td>
             </tr>
             <tr>
                 <td>
-                    <span>8</span>
-                    <img src="" alt="">
+                    <span>Сладости</span>
+                    <img src="./img/sweets.png" width="270px" height="230px" alt="">
                 </td>
-                <td>8</td>
+                <td>< 5 в неделю</td>
                 <td>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li>1 ст. л. сахара,</li>
+                        <li>1 ст. л. варенья</li>
                     </ul>
                 </td>
-                <td></td>
-                <td></td>
+                <td>Сахар, варенье, конфеты зефир, пастила, мороженое</td>
+                <td>Сладости должны быть с низким содержанием жира</td>
             </tr>
         </tbody>
     </table>
