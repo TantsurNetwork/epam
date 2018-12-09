@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>
+            <label>Обращение*</label> 
+            <label for="mr">Господин <input type="radio" name="call" id="mr" value="mr" checked></label>
+            <label for="ms">Госпожа <input type="radio" name="call" id="ms" value="ms"></label>
+        </p>
+        <p>
+            <label for="rank">Звание</label>
+            <input type="text" name="rank" id="rank">
+        </p>
+        <p>
+            <label for="name">Имя*</label>
+            <input type="text" id="name" required>
+        </p>
+        <p>
+            <label for="surname">Фамилия*</label>
+            <input type="text" id="surname" required>
+        </p>
+        <p>
+            <label for="street">Улица*</label>
+            <input type="text" id="street" required>
+        </p>
+        <p>
+            <label for="index">Индекс/город</label>
+            <input type="number" id="index" min="0" size="5"> 
+            <input type="text" id="city">
+        </p>
+        <p>
+            <label for="country">Страна*</label>
+            <input type="text" id="country" list="countries" required>
+            <datalist id="countries">
+                <option value="Украина">
+                <option value="Россия">
+                <option value="Беларусь">
+                <option value="Польша">
+            </datalist>
+        </p>
+        <p>
+            <label for="currency">Валюта*</label>
+            <input type="text" list="currencies" id="currency" required>
+            <datalist id="currencies">
+                <option value="Американский доллар (USD)">
+                <option value="Украинская гривна (UA)">
+                <option value="Российский рубль (Russian Ruble)">
+                <option value="Беларусский рубль (BYR)">
+                <option value="Польский злотый (PLN)">
+            </datalist>
+        </p>
+        <p>
+            <label for="birth-date">Дата рождения*</label>
+            <input type="date" id="birth-date" min="1987-09-18" required>
+        </p>
+        <p>
+            <label for="mail">E-Mail*</label>
+            <input type="email" id="mail" required>
+        </p>
+    </form>
+    <form action=""></form>
+</body>
+</html>
