@@ -1,69 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <form action="">
-        <p>
-            <label>Обращение*</label> 
-            <label for="mr">Господин <input type="radio" name="call" id="mr" value="mr" checked></label>
-            <label for="ms">Госпожа <input type="radio" name="call" id="ms" value="ms"></label>
-        </p>
-        <p>
-            <label for="rank">Звание</label>
-            <input type="text" name="rank" id="rank">
-        </p>
-        <p>
-            <label for="name">Имя*</label>
-            <input type="text" id="name" required>
-        </p>
-        <p>
-            <label for="surname">Фамилия*</label>
-            <input type="text" id="surname" required>
-        </p>
-        <p>
-            <label for="street">Улица*</label>
-            <input type="text" id="street" required>
-        </p>
-        <p>
-            <label for="index">Индекс/город</label>
-            <input type="number" id="index" min="0" size="5"> 
-            <input type="text" id="city">
-        </p>
-        <p>
-            <label for="country">Страна*</label>
-            <input type="text" id="country" list="countries" required>
-            <datalist id="countries">
-                <option value="Украина">
-                <option value="Россия">
-                <option value="Беларусь">
-                <option value="Польша">
-            </datalist>
-        </p>
-        <p>
-            <label for="currency">Валюта*</label>
-            <input type="text" list="currencies" id="currency" required>
-            <datalist id="currencies">
-                <option value="Американский доллар (USD)">
-                <option value="Украинская гривна (UA)">
-                <option value="Российский рубль (Russian Ruble)">
-                <option value="Беларусский рубль (BYR)">
-                <option value="Польский злотый (PLN)">
-            </datalist>
-        </p>
-        <p>
-            <label for="birth-date">Дата рождения*</label>
-            <input type="date" id="birth-date" min="1987-09-18" required>
-        </p> -->
-        <p>
-            <label for="mail">E-Mail*</label>
-            <input type="email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="" required>
-        </p>
-        <button type="submit">Submit</button>
+        <ol>
+            <li>
+                <h1>Личные данные</h1>
+                <p>
+                    <label>Обращение*</label>
+                    <label for="mr">Господин <input type="radio" name="call" id="mr" value="mr" checked></label>
+                    <label for="ms">Госпожа <input type="radio" name="call" id="ms" value="ms"></label>
+                </p>
+                <p>
+                    <label for="rank">Звание</label>
+                    <input type="text" name="rank" id="rank">
+                </p>
+                <p>
+                    <label for="name">Имя*</label>
+                    <input type="text" id="name" required>
+                </p>
+                <p>
+                    <label for="surname">Фамилия*</label>
+                    <input type="text" id="surname" required>
+                </p>
+                <p>
+                    <label for="street">Улица*</label>
+                    <input type="text" id="street" required>
+                </p>
+                <p>
+                    <label for="index">Индекс/город</label>
+                    <input type="number" id="index" min="0" size="5">
+                    <input type="text" id="city">
+                </p>
+                <p>
+                    <label for="country">Страна*</label>
+                    <input type="text" id="country" list="countries" required>
+                    <datalist id="countries">
+                        <option value="Украина">
+                        <option value="Россия">
+                        <option value="Беларусь">
+                        <option value="Польша">
+                    </datalist>
+                </p>
+                <p>
+                    <label for="currency">Валюта*</label>
+                    <input type="text" list="currencies" id="currency" required>
+                    <datalist id="currencies">
+                        <option value="Американский доллар (USD)">
+                        <option value="Украинская гривна (UA)">
+                        <option value="Российский рубль (Russian Ruble)">
+                        <option value="Беларусский рубль (BYR)">
+                        <option value="Польский злотый (PLN)">
+                    </datalist>
+                </p>
+                <p>
+                    <label for="birth-date">Дата рождения*</label>
+                    <input type="date" id="birth-date" min="1987-09-18" required>
+                </p>
+                <p>
+                    <label for="mail">E-Mail*</label>
+                    <input type="email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" title="" required>
+                </p>
+                <p>
+                    <label for="mobile-phone">Мобильный телефон</label>
+                    <select id="mobile-phone">
+                        <option value="+380">+380</option>
+                        <option value="+7">+7</option>
+                        <option value="+375">+375</option>
+                        <option value="+48">+48</option>
+                    </select>
+                    <input type="text" pattern="[0-9]{3}" title="3 numbers">
+                    <input type="text" pattern="[0-9]{4}" title="4 numbers">
+                </p>
+                <p>
+                    <label for="phone">Телефон</label>
+                    <select id="phone">
+                        <option value="+380">+380</option>
+                        <option value="+7">+7</option>
+                        <option value="+375">+375</option>
+                        <option value="+48">+48</option>
+                    </select>
+                    <input type="text" pattern="[0-9]{3}" title="3 numbers">
+                    <input type="text" pattern="[0-9]{4}" title="4 numbers">
+                </p>
+            </li>
+            <li>
+                <h1>Данные доступа</h1>
+                <p>
+                    <label for="password">Пароль*</label>
+                    <input type="password" id="password" required>
+                </p>
+                <p>
+                    <progress value="0.4">Some</progress>
+                </p>
+                <p>
+                    <label for="password-repeat">Повторите пароль*</label>
+                    <input type="password" id="password-repeat" required>
+                </p>
+                <p>
+                    <label for="question">Контрольный вопрос*</label>
+                    <select name="" id="question">
+                        <option value="">Название Вашего первого автомобиля</option>
+                        <option value="">Девичья фамилия матери</option>
+                        <option value="">Любимое блюдо</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="answer">Ваш ответ*</label>
+                    <input type="text" id="answer" required pattern="{3}">
+                </p>
+                <p class="confirment">
+                    <input type="checkbox" id="is-adult">
+                    <label for="is-adult">
+                        Я принимаю политику конфиденциальности и подверждаю, что мне исполнилось 18 лет
+                    </label>
+                </p>
+
+                <button type="submit">Submit</button>
+            </li>
+        </ol>
+
     </form>
 </body>
+
 </html>
