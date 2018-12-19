@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    a, a:visited {
+        text-decoration: none;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    fieldset {
+        vertical-align: top;
+        border: none;
+        flex-grow: 1 !important;
+        width: 45%;
+        /* flex-basis: 1; */
+    }
+
+    .flex-wrapper {
+        display: flex;
+    }
+
+    input:not([type="radio"]):not([type="checkbox"])  {
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    input:not([type="radio"]):not([type="checkbox"]), select#question {
+        width: 40%;
+    }
+
+    span::after, div.marked::after {
+        content: '✔';
+    }
+
+    .fieldset-element {
+        padding: 5px 0;
+    }
+
+    .fieldset-element label {
+        display: inline-block;
+        width: 35%;
+    }
+
+    .fieldset-element label[for="mr"], .fieldset-element label[for="ms"] {
+        width: auto;
+    }
+
+    button[type="submit"] {
+        display: block;
+        width: 80%;
+        background: #9cc554;
+        color: white;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 10px 0;
+        margin: auto;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    .phone-section--2 {
+        width: 10% !important;   
+    }
+
+    .phone-section--3 {
+        width: 18% !important;   
+    }
+
+    #index {
+        width: 10%;
+    }
+    #city {
+        width: 29%;
+    }
+
+    #is-adult {
+        vertical-align: top;
+    }
+
+    label[for="is-adult"] {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .confirment {
+        background: #dddfe0;
+        margin-top: 60px;
+    }
+
+</style>
+
+<body>
+    <form action="">
+        <div class="flex-wrapper">
+            <fieldset>
+                <h1>1. Личные данные</h1>
+                <div class="fieldset-element">
+                    <label>Обращение*</label>
+                    <label for="mr">Господин <input type="radio" name="call" id="mr" value="mr" checked></label>
+                    <label for="ms">Госпожа <input type="radio" name="call" id="ms" value="ms"></label>
+                </div>
+                <div class="fieldset-element">
+                    <label for="rank">Звание</label>
+                    <span>
+                        <input type="text" name="rank" id="rank" class="match">
+                    </span>
+
+                </div>
+                <div class="fieldset-element">
+                    <label for="name">Имя*</label>
+                    <span>
+                        <input type="text" id="name" required class="match">
+                    </span>
+                </div>
+                <div class="fieldset-element">
+                    <label for="surname">Фамилия*</label>
+                    <span>
+                        <input type="text" id="surname" required>
+                    </span>
+                </div>
+                <div class="fieldset-element">
+                    <label for="street">Улица*</label>
+                    <span>
+                        <input type="text" id="street" required>
+                    </span>
+                </div>
+                <div class="fieldset-element">
+                    <label for="index">Индекс/город*</label>
+                    <input type="number" id="index" min="0" size="5" required>
+                    <span>
+                        <input type="text" id="city" required>
+                    </span>
+                </div>
+                <div class="fieldset-element">
+                    <label for="country">Страна*</label>
+                    <span>
+                        <input type="text" id="country" list="countries" required>
+                    </span>
+                    <datalist id="countries">
+                        <option value="Украина">
+                        <option value="Россия">
+                        <option value="Беларусь">
+                        <option value="Польша">
+                    </datalist>
+                </div>
+                <div class="fieldset-element">
+                    <label for="currency">Валюта*</label>
+                    <span>
+                        <input type="text" list="currencies" id="currency" required>
+                    </span>
+                    <datalist id="currencies">
+                        <option value="Американский доллар (USD)">
+                        <option value="Украинская гривна (UA)">
+                        <option value="Российский рубль (Russian Ruble)">
+                        <option value="Беларусский рубль (BYR)">
+                        <option value="Польский злотый (PLN)">
+                    </datalist>
+                </div>
+                <div class="fieldset-element">
+                    <label for="birth-date">Дата рождения*</label>
+                    <span>
+                        <input type="date" id="birth-date" min="1987-09-18" required>
+                    </span>
+                </div>
+                <div class="fieldset-element">
+                    <label for="mail">E-Mail*</label>
+                    <span>
+                        <input type="email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" title=""
+                            required>
+                    </span>
+                </div>
+                <div class="fieldset-element">
+                    <label for="mobile-phone">Мобильный телефон</label>
+                    <select id="mobile-phone">
+                        <option value="+380">+380</option>
+                        <option value="+7">+7</option>
+                        <option value="+375">+375</option>
+                        <option value="+48">+48</option>
+                    </select>
+                    <input type="text" class="phone-section--2" pattern="[0-9]{3}" title="3 numbers">
+                    <span>
+                        <input type="text" class="phone-section--3" pattern="[0-9]{4}" title="4 numbers">
+                    </span>
+
+                </div>
+                <div class="fieldset-element">
+                    <label for="phone">Телефон</label>
+                    <select id="phone">
+                        <option value="+380">+380</option>
+                        <option value="+7">+7</option>
+                        <option value="+375">+375</option>
+                        <option value="+48">+48</option>
+                    </select>
+                    <input type="text" class="phone-section--2" pattern="[0-9]{3}" title="3 numbers">
+                    <span>
+                        <input type="text" class="phone-section--3" pattern="[0-9]{4}" title="4 numbers">
+                    </span>
+                </div>
+            </fieldset>
+            <fieldset>
+
+                <h1>2. Данные доступа</h1>
+                <div class="fieldset-element">
+                    <label for="password" style="vertical-align: top">Пароль*</label>
+                    <div style="display: inline-block; width: 50%">
+                        <span>
+                            <input type="password" id="password" pattern="[a-zA-Z0-9_-.]{8-20}" style="width: 80%" required>
+                        </span>
+                        <p style="font-size: 14px; margin: 5px 0 0;">(8-20 символов: цифры и буквы)</p>
+                    </div>
+                </div>
+                <div class="fieldset-element">
+                    <label>Надежность пароля</label>
+                    <progress value="0.4">Some</progress>
+                </div>
+                <div class="fieldset-element">
+                    <label for="password-repeat">Введите пароль еще раз*</label>
+                    <span>
+                        <input type="password" id="password-repeat" required>
+                    </span>
+                </div>
+                <div class="fieldset-element">
+                    <label for="question">Контрольный вопрос*</label>
+                    <select name="" id="question" required>
+                        <option value="">Название Вашего первого автомобиля</option>
+                        <option value="">Девичья фамилия матери</option>
+                        <option value="">Любимое блюдо</option>
+                    </select>
+                </div>
+                <div class="fieldset-element">
+                    <label for="answer">Ваш ответ*</label>
+                    <span>
+                        <input type="text" id="answer" required pattern="{3}">
+                    </span>
+                </div>
+                <div class="confirment">
+                    <input type="checkbox" id="is-adult" checked>
+                    <label for="is-adult">
+                        Я принимаю <a href="">Общие условия и положения</a> и <a>Политику конфиденциальности</a>. 
+                        Мне уже исполнилось 18 лет и даю свое согласие на отправку мне рекламы и информации о 
+                        продуктах bet-at-home.com. Я могу в любое время отказаться от своего согласия на получение 
+                        рекламы и информации о продуктах в настройках своего счета.
+                    </label>
+                </div>  
+                <button type="submit">Зарегистрироваться прямо сейчас!</button>
+                
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>

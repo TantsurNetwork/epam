@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form2</title>
+</head>
+<style>
+    form {
+        max-width: 75vw;
+        margin: auto
+    }
+
+    fieldset {
+        background: aliceblue;
+        border: none;
+    }
+
+    .fieldset-element {
+        margin: 20px 0;
+    }
+
+    legend {
+        background: linear-gradient(-90deg, #0a7eb4, #89c5e0);
+        position: relative;
+        right: 14px;
+        bottom: 7.8px;
+        width: 100%;
+        padding: 5px 12px;
+        border: 1px solid linear-gradient(-90deg, #0a7eb4, #89c5e0);
+        ;
+        border-radius: 8px;
+    }
+
+    label {
+        display: inline-block;
+        width: 30% !important;
+        flex-basis: 30%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: right;
+        padding-right: 20px; 
+    }
+
+    .side-section {
+        display: inline-block;
+    }
+
+    .side-section--small {
+        width: 30%;
+    }
+
+    .side-section--small p {
+       font-size: 12px;
+    }
+
+    .side-section--big {
+        width: 60%;
+    }
+
+    button {
+        vertical-align: top;
+    }
+
+    .fieldset-element--align *{
+        display: inline-block;
+    }
+
+    .fieldset-element--align label {
+        vertical-align: top;
+    }
+    .fieldset-element--align select {
+        
+        vertical-align: top;
+    }
+    .fieldset-element--align p {
+        margin: 0;
+        margin-left: 20px;
+        vertical-align: top;
+        width: 50%;
+    }
+    
+    .small-text {
+        font-size: 14px;
+    }
+
+</style>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Адрес</legend>
+            <div class="fieldset-element">
+                <label for="country">Страна</label>
+                <div class="side-section side-section--big">
+                    <select type="text" id="country">
+                        <option value="" selected>Украина</option>
+                        <option value="">Российская Федерация</option>
+                        <option value="">Польша</option>
+                    </select>
+                    <p>Нам необходимо знать ваш адрес для проверки личности клиента и обеспечения безопасности сайта</p>
+                </div>
+            </div>
+            <div class="fieldset-element">
+                <label for="adress">Адрес</label>
+                <input type="text" id="adress">
+            </div>
+            <div class="fieldset-element">
+                <label for="city">Город</label>
+                <input type="text" id="city">
+            </div>
+            <div class="fieldset-element">
+                <label for="region">Область</label>
+                <input class="after" type="text" id="region">
+                <span style="margin-left: 20px">необязательно</span>
+            </div>
+            <div class="fieldset-element">
+                <label for="post-index">Почтовый индекс</label>
+                <input type="text" id="post-index">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Данные счета Belfair</legend>
+            <div class="fieldset-element">
+                <label for="username">Имя пользователя</label>
+                <div class="side-section side-section--small">
+                    <input type="text" id="username" pattern="[a-zA-Z0-9]{6-40}">
+                    <p>
+                        6-40 знаков. Чуствительно к регистру
+                    </p>
+                </div>
+                <button class="accessibility-check">Проверить доступность</button>
+            </div>
+            <div class="fieldset-element">
+                <label for="password">Пароль</label>
+                <div class="side-section side-section--small">
+                    <input type="password" id="password" pattern="[a-zA-Z0-9]{8-20}">
+                    <p>8-20 знаков</p>
+                </div>
+            </div>
+            <div class="fieldset-element">
+                <label for="password-confirmation">Подтверждение пароля</label>
+                <input type="password" id="password-confirmation">
+            </div>
+            <div class="fieldset-element">
+                <label for="secret-question">Секретный вопрос</label>
+                <select type="text" id="secret-question">
+                    <option value="" selected>Имя отца?</option>
+                    <option value="">Девичья фамилия матери?</option>
+                    <option value="">Первый автомобиль?</option>
+                </select>
+            </div>
+            <div class="fieldset-element">
+                <label for="answer">Ваш ответ</label>
+                <input type="text" id="answer">
+            </div>
+            <div class="fieldset-element fieldset-element--align">
+                <label for="currency">Валюта счета Belfair</label>
+                <select type="text" id="currency">
+                    <option value="" selected>Доллар США</option>
+                    <option value="">Гривна</option>
+                    <option value="">Рубль</option>
+                    <option value="">Злотый</option>
+                </select>
+                <p>
+                    Пожалуйста, выберите другую валюту, если тип валюты, которой выпользуетесь, не представлен в
+                    списке. Вы сможете продолжать пользоваться Belfair. Деньги, которые Вы вносите на счет, будут
+                    конвертированы в валюту, выбранную Вами здесь
+                </p>
+            </div>
+            <div class="fieldset-element">
+                <label for="promo">Если имеется, пожалуйста, введите код промо акции или код программы "Привлекай и
+                    получай"</label>
+                <span><input type="radio" name="promo" id="promo"> Да</span>
+                <span><input type="radio" name="promo" id="" checked> Нет</span>
+            </div>
+            <div class="fieldset-element">
+                <label for=""></label>
+                <div class="side-section side-section--big">
+                    <p>Нажав на кнопку, Вы:</p>
+                    <ul>
+                        <li>Подтверждаете, что Вам есть 18 лет.</li>
+                        <li>Соглашаетесь с <a href="">Условиями и положениями</a> и <a href="">Полититкой конфиденциальности</a></li>
+                        <li>Соглашаетесь получать информацию от Belfair, и вразделе "Мой счет" изменять настройки рассылки</li>
+                    </ul>
+                    <button type="submit">Согласен и открыть счет</button>
+                    <p class="small-text">Прежде чем делать ставки на бирже, играть в покер или игры, Вам необходимо внести деньги на Ваш игровой счет.</p>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
